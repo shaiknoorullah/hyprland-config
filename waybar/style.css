@@ -1,0 +1,83 @@
+/* Waybar — minimal-functional, Catppuccin Mocha */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.85);  /* base */
+  color: #cdd6f4;                       /* text */
+  border-bottom: 1px solid #313244;     /* surface0 */
+}
+
+/* shared module padding */
+#workspaces, #window, #clock, #tray, #network, #pulseaudio, #custom-power {
+  padding: 4px 10px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  background: #1e1e2e;                  /* mantle */
+}
+
+/* workspaces */
+#workspaces button {
+  padding: 0 6px;
+  margin: 0 2px;
+  color: #6c7086;                       /* overlay0 */
+  background: transparent;
+  border-radius: 6px;
+}
+#workspaces button.active {
+  color: #1e1e2e;
+  background: #cba6f7;                  /* mauve */
+}
+#workspaces button.urgent {
+  color: #1e1e2e;
+  background: #f38ba8;                  /* red */
+}
+#workspaces button:hover {
+  background: #45475a;                  /* surface1 */
+  color: #cdd6f4;
+}
+
+/* focused window title */
+#window {
+  color: #cdd6f4;
+  background: #181825;                  /* crust */
+}
+
+/* clock */
+#clock {
+  color: #f9e2af;                       /* yellow */
+}
+
+/* tray */
+#tray {
+  background: #181825;
+}
+#tray > .needs-attention {
+  background: #f38ba8;
+}
+
+/* network */
+#network              { color: #a6e3a1; } /* green */
+#network.disconnected { color: #f38ba8; } /* red */
+
+/* volume */
+#pulseaudio        { color: #94e2d5; }   /* teal */
+#pulseaudio.muted  { color: #585b70; }   /* surface2 */
+
+/* power */
+#custom-power {
+  color: #f38ba8;                       /* red */
+  font-size: 15px;
+  padding: 4px 12px;
+}
+#custom-power:hover {
+  color: #1e1e2e;
+  background: #f38ba8;
+}
